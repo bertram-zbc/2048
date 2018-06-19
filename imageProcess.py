@@ -20,8 +20,8 @@ print(pytesseract.image_to_string(part1, config="-psm 6"))
 
 def getArray(image):
 	record = [] #转化为的二维数组
-	line = [] #每一行的结果
 	for i in range(0,4):
+		line = [] #每一行的结果
 		for j in range(0,4):
 			beginY = STARTY + (SQUARE+MARGIN) * i
 			endY = beginY + SQUARE
@@ -38,4 +38,5 @@ def getArray(image):
 if __name__ == '__main__':
 	#for test
 	image = cv2.imread('test.png')
-	getArray(image)
+	record = getArray(image)
+	print record
