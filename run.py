@@ -7,7 +7,7 @@ import os
 import re
 import cv2
 import time
-from imageProcess import getArray
+from imageProcess import getArray,getArray2
 from action import move
 
 def run():
@@ -25,7 +25,7 @@ def run():
 		end = time.time()
 		print "load pic: ", end-start
 		#转换为数组
-		array = getArray(screen_image)
+		array = getArray2(screen_image)
 		start = time.time()
 		print "process image: ", start-end
 		#手势操作

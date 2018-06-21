@@ -6,6 +6,9 @@ from config import *
 
 import pytesseract
 import cv2
+import time
+import numpy as np
+import cmath
 
 '''
 img = cv2.imread('test.png')
@@ -35,8 +38,35 @@ def getArray(image):
 		record.append(line)
 	return record
 
+def getArray2(image):
+	#图像识别算法2，不通过pytesseract，直接比较图像像素均值
+	record = []
+	for i in range(0,4):
+		line = []
+		for j in range(0,4):
+			beginY = STARTY + (SQUARE+MARGIN) * i
+			endY = beginY + SQUARE
+			beginX = STARTX + (SQUARE+MARGIN) * j
+			endX = beginX + SQUARE
+			part = image[beginY:endY, beginX:endX]
+			text = getValue(part)
+			line.append(text)
+		record.append(line)
+	return record
+
+def getValue(image):
+	#根据图片的像素均值判断图片中的数值
+	pixal_mean = np.mean(image)
+	for x in xrange(0,len(pixal_means)):
+		if abs(pixal_means[x] - pixal_mean) <= 0.1:
+			return pixal_values[x]
+	return ''
+
 if __name__ == '__main__':
 	#for test
+	start = time.time()
 	image = cv2.imread('test.png')
-	record = getArray(image)
+	record = getArray2(image)
+	end = time.time()
 	print record
+	print "running time: ", end-start
