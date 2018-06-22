@@ -5,7 +5,7 @@ config.py
 '''
 
 #移动时间ms
-DURATION = 400
+DURATION = 100
 
 #上下移动时上面点的坐标
 UPX = 495

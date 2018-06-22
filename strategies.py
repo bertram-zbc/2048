@@ -3,6 +3,7 @@
 strategies.py
 数组移动策略
 '''
+import time
 
 left = 0
 right = 1
@@ -57,3 +58,12 @@ def calScore(array, leftRright):
 				score += long(array[i])
 				i-=1
 	return score
+
+if __name__ == '__main__':
+	#for test
+	array = [[2,'','',''],[16,'',2,''],[64,32,'',''],[4,2,'','']]
+	start = time.time()
+	greddyStrategy(array)
+	end = time.time()
+	print end-start
+

@@ -12,23 +12,25 @@ from strategies import greddyStrategy
 
 def moveUp():
 	#向上移动手势操作
-	cmd = 'adb shell input swipe '+str(DOWNX)+' '+str(DOWNY)+' '+str(UPX)+' '+str(UPY)+' '+str(DURATION)
-	print cmd
+	cmd = 'adb shell input touchscreen swipe '+str(DOWNX)+' '+str(DOWNY)+' '+str(UPX)+' '+str(UPY)+' '+str(DURATION)
+	#print cmd
 	os.system(cmd)
 
 def moveDown():
-	cmd = 'adb shell input swipe '+str(UPX)+' '+str(UPY)+' '+str(DOWNX)+' '+str(DOWNY)+' '+str(DURATION)
-	print cmd
+	cmd = 'adb shell input touchscreen swipe '+str(UPX)+' '+str(UPY)+' '+str(DOWNX)+' '+str(DOWNY)+' '+str(DURATION)
+	#print cmd
 	os.system(cmd)
 
 def moveLeft():
-	cmd = 'adb shell input swipe '+str(RIGHTX)+' '+str(RIGHTY)+' '+str(LEFTX)+' '+str(LEFTY)+' '+str(DURATION)
-	print cmd
+	
+	cmd = 'adb shell input touchscreen swipe '+str(RIGHTX)+' '+str(RIGHTY)+' '+str(LEFTX)+' '+str(LEFTY)+' '+str(DURATION)
+	#print cmd
 	os.system(cmd)
 
 def moveRight():
-	cmd = 'adb shell input swipe '+str(LEFTX)+' '+str(LEFTY)+' '+str(RIGHTX)+' '+str(RIGHTY)+' '+str(DURATION)
-	print cmd
+	
+	cmd = 'adb shell input touchscreen swipe '+str(LEFTX)+' '+str(LEFTY)+' '+str(RIGHTX)+' '+str(RIGHTY)+' '+str(DURATION)
+	#print cmd
 	os.system(cmd)
 
 def move(array, lastArray, lastMove):
@@ -51,10 +53,10 @@ def move(array, lastArray, lastMove):
 
 if __name__ == '__main__':
 	#for test
-	moveUp()
-	#time.sleep(2)
-	moveDown()
-	#time.sleep(2)
-	moveLeft()
-	#time.sleep(2)
-	moveRight()
+	array = [[2,'','',''],[16,'',2,''],[64,32,'',''],[4,2,'','']]
+	lastArray = []
+	lastMove = 0
+	start = time.time()
+	move(array, lastArray, lastMove)
+	end = time.time()
+	print end-start
