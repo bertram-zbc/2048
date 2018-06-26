@@ -33,14 +33,10 @@ def moveRight():
 	#print cmd
 	os.system(cmd)
 
-def move(array, lastArray, lastMove):
+def move(array):
 	#根据数组判断应该如何操作
-	result = 0
-	if array == lastArray:
-		result = (lastMove + 1)%4
-		print "SAME"
-	else:
-		result = greddyStrategy(array)
+	result = greddyStrategy(array)
+	print "result: ", result
 	if result == 0:
 		moveLeft()
 	elif result == 1:
@@ -49,7 +45,6 @@ def move(array, lastArray, lastMove):
 		moveUp()
 	else:
 		moveDown()
-	return result
 
 if __name__ == '__main__':
 	#for test
