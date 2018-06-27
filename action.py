@@ -8,7 +8,7 @@ import re
 import time
 
 from config import *
-from strategies import greddyStrategy
+from strategies import greddyStrategy, improved_greddyStrategy
 
 def moveUp():
 	#向上移动手势操作
@@ -35,8 +35,8 @@ def moveRight():
 
 def move(array):
 	#根据数组判断应该如何操作
-	result = greddyStrategy(array)
-	print "result: ", result
+	result = improved_greddyStrategy(array)
+	print result
 	if result == 0:
 		moveLeft()
 	elif result == 1:

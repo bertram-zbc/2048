@@ -26,7 +26,9 @@ def run():
 		move(array)
 
 
-#run()
+run()
+
+#单步操作
 os.system('adb shell screencap -p /sdcard/2048.png')
 os.system('adb pull /sdcard/2048.png')
 
