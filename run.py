@@ -36,7 +36,6 @@ screen_image = cv2.imread('2048.png')
 
 #转换为数组
 array = getArray2(screen_image)
-print array
 
 #手势操作
 move(array)

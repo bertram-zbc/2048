@@ -267,10 +267,10 @@ def canMoveDown(array):
 
 if __name__ == '__main__':
 	#for test
-	array = [['',4,8,2],
-			 ['','','',4],
-			 ['','','',8],
-			 ['','','',16]]
+	array = [[4,8,2,4],
+			 [64,8,32,2],
+			 [4,2,4,8],
+			 [2,8,4,2]]
 	print canMoveLeft(array)
 	print canMoveRight(array)
 	print canMoveUp(array)
