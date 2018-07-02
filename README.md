@@ -44,3 +44,7 @@ $ python run.py
 - 电脑的回合，游戏的逻辑是随机添加一个2或者4的方块，这里我们遍历电脑所有可能添加的位置，并取最坏的情况
 - 玩家回合，直接评估得分并取最大值
 从而判定当前状态应该向左移动
+
+## Reference
+<https://stackoverflow.com/questions/22342854/what-is-the-optimal-algorithm-for-the-game-2048>
+<https://www.zhihu.com/question/23029850>
