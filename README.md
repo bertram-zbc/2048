@@ -16,9 +16,11 @@ $ python run.py
 ## 图像识别
 
 先计算出每个方块数字的像素均值并保存，如下图是数字2对应的方块
+
 <img src="https://github.com/bertram-zbc/2048/blob/master/info/sample2.png" width=128 height=128 />
 
 在截取的图片中提取出16个方块，并一一与之前保存好的像素均值列表比较，像素均值相同的方块对应的数字就是图片中的数字，由于每次截图的方块图片并不是完全相同的，像素均值不会完全相等，需要设置一个误差范围，当像素均值的差小于这个误差值就认为是相等的
+
 <img src="https://github.com/bertram-zbc/2048/blob/master/info/sample1.png" width=216 height=384 />
 
 ## 移动策略
