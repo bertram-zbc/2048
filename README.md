@@ -7,11 +7,14 @@ adb + python + opencv
 $ python run.py
 ```
 
+
+
 ## 流程
 - Android设备截取当前图像并发送到电脑
 - 图像识别，得到对应的4x4矩阵
 - 计算下一步的移动方向
 - 执行命令
+
 
 ## 图像识别
 
@@ -21,7 +24,8 @@ $ python run.py
 
 在截取的图片中提取出16个方块，并一一与之前保存好的像素均值列表比较，像素均值相同的方块对应的数字就是图片中的数字，由于每次截图的方块图片并不是完全相同的，像素均值不会完全相等，需要设置一个误差范围，当像素均值的差小于这个误差值就认为是相等的
 
-<img src="https://github.com/bertram-zbc/2048/blob/master/info/sample1.png" width=216 height=384 />
+<img src="https://github.com/bertram-zbc/2048/blob/master/info/sample1.png" width=384 height=576 />
+
 
 ## 移动策略
 
@@ -44,6 +48,7 @@ $ python run.py
 - 电脑的回合，游戏的逻辑是随机添加一个2或者4的方块，这里我们遍历电脑所有可能添加的位置，并取最坏的情况
 - 玩家回合，直接评估得分并取最大值
 从而判定当前状态应该向左移动
+
 
 ## Reference
 <https://stackoverflow.com/questions/22342854/what-is-the-optimal-algorithm-for-the-game-2048>
