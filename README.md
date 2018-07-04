@@ -1,8 +1,8 @@
 # 2048
 adb + python + opencv 实现Android系统2048游戏控制脚本
 
-适配1920x1080分辨率屏幕
-适配游戏：<https://play.google.com/store/apps/details?id=com.tpcstld.twozerogame>
+适配1920x1080分辨率屏幕  
+适配游戏：<https://play.google.com/store/apps/details?id=com.tpcstld.twozerogame>  
 其他游戏和不同屏幕分辨率的手机需要修改`config.py`中的参数适配
 
 ```
