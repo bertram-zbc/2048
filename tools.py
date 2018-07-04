@@ -4,7 +4,6 @@
 并计算出样式图片的像素均值用于比较
 '''
 
-import pytesseract
 import cv2
 import time
 import numpy as np

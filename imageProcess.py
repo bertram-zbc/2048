@@ -4,7 +4,7 @@ imageProcess.py
 '''
 from config import *
 
-import pytesseract
+#import pytesseract
 import cv2
 import time
 import numpy as np
@@ -22,6 +22,7 @@ print(pytesseract.image_to_string(part1, config="-psm 6"))
 '''
 
 def getArray(image):
+	#使用pytesseract工具，但是识别速度很慢
 	record = [] #转化为的二维数组
 	for i in range(0,4):
 		line = [] #每一行的结果
