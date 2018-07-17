@@ -4,6 +4,8 @@
 并计算出样式图片的像素均值用于比较
 '''
 
+import os
+import re
 import cv2
 import time
 import numpy as np
@@ -24,6 +26,8 @@ def getImage(image):
 	return record
 
 
+os.system('adb shell screencap -p /sdcard/2048.png')
+os.system('adb pull /sdcard/2048.png')
 img = cv2.imread("2048.png")
 getImage(img)
 for x in xrange(0,16):

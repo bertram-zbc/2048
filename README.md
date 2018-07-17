@@ -55,3 +55,4 @@ $ python run.py
 ## Reference
 <https://stackoverflow.com/questions/22342854/what-is-the-optimal-algorithm-for-the-game-2048>
 <https://www.zhihu.com/question/23029850>
+<http://web.cs.ucla.edu/~rosen/161/notes/alphabeta.html>
